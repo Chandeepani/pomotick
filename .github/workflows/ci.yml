@@ -15,8 +15,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-          
-      - run: npm install
 
       - name: Run HTMLHint (if index.html exists)
         run: |
@@ -43,4 +41,6 @@ jobs:
       - uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+
           publish_dir: ./
+
